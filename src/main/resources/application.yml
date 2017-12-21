@@ -1,3 +1,7 @@
+spring:
+  profiles:
+    active: dev
+
 my:
   name: xfan
   age: 23
