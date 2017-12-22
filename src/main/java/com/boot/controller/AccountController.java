@@ -1,7 +1,8 @@
 package com.boot.controller;
 
-import com.boot.dao.AccountDAO;
+import com.boot.dao.jpa.AccountDAO;
 import com.boot.models.Account;
+import com.boot.service.AccountService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,7 +19,12 @@ public class AccountController {
 
     @Resource
     private AccountDAO accountDAO;
+    @Resource
+    private AccountService accountService;
 
+    /**
+     * JPA
+     */
     @GetMapping(value = "/list")
     public List<Account> getAccounts() {
         return accountDAO.findAll();
@@ -37,4 +43,19 @@ public class AccountController {
         Account account1 = accountDAO.save(account);
         return account1.toString();
     }
+
+    /**
+     * Mybatis
+     */
+    @GetMapping(value = "/list2")
+    public List<Account> getAccountsList() {
+        return accountService.selectAccountList();
+    }
+
+    @PostMapping(value = "/add")
+    public int addAccounts2(@RequestParam(value = "name") String name,
+                            @RequestParam(value = "money") double money) {
+        return accountService.addAccount(name,money);
+    }
+
 }

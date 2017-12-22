@@ -1,4 +1,4 @@
-package com.boot.dao;
+package com.boot.dao.jpa;
 
 import com.boot.models.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
