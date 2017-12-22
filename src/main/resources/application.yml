@@ -1,6 +1,16 @@
 spring:
-  profiles:
-    active: dev
+#  profiles:
+#    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/xfan?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: xfan
+
+  jpa:
+      hibernate:
+        ddl-auto: update  # 第一次简表create  后面用update
+      show-sql: true
 
 my:
   name: xfan
