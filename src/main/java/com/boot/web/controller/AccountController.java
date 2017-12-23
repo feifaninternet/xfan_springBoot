@@ -1,8 +1,11 @@
-package com.boot.controller;
+package com.boot.web.controller;
 
-import com.boot.dao.jpa.AccountDAO;
-import com.boot.models.Account;
-import com.boot.service.AccountService;
+import com.boot.web.dao.jpa.AccountDAO;
+import com.boot.web.models.Account;
+import com.boot.web.service.AccountService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -47,11 +50,17 @@ public class AccountController {
     /**
      * Mybatis
      */
+    @ApiOperation(value="accountList", notes="get all account")
     @GetMapping(value = "/list2")
     public List<Account> getAccountsList() {
         return accountService.selectAccountList();
     }
 
+    @ApiOperation(value="add account", notes="add a new account")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "name", required = true,paramType = "query"),
+            @ApiImplicitParam(name = "money", required = true, dataType = "double",paramType = "query")
+    })
     @PostMapping(value = "/add")
     public int addAccounts2(@RequestParam(value = "name") String name,
                             @RequestParam(value = "money") double money) {

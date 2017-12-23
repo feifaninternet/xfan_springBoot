@@ -1,6 +1,6 @@
-package com.boot.dao.mybatis;
+package com.boot.web.dao.mybatis;
 
-import com.boot.models.Account;
+import com.boot.web.models.Account;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

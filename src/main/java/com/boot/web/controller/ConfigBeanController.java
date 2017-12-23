@@ -1,7 +1,7 @@
-package com.boot.controller;
+package com.boot.web.controller;
 
-import com.boot.models.ConfigBean;
-import com.boot.models.User;
+import com.boot.web.models.ConfigBean;
+import com.boot.web.models.User;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

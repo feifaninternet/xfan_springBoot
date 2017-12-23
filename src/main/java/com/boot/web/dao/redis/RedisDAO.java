@@ -1,4 +1,4 @@
-package com.boot.dao.redis;
+package com.boot.web.dao.redis;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;

@@ -1,6 +1,6 @@
-package com.boot.service;
+package com.boot.web.service;
 
-import com.boot.models.Account;
+import com.boot.web.models.Account;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.boot.controller;
+package com.boot.web.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;

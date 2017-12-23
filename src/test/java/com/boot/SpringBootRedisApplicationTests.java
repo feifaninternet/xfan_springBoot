@@ -1,6 +1,6 @@
 package com.boot;
 
-import com.boot.dao.redis.RedisDAO;
+import com.boot.web.dao.redis.RedisDAO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
