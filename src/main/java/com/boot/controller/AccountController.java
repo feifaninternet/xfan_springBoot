@@ -58,4 +58,10 @@ public class AccountController {
         return accountService.addAccount(name,money);
     }
 
+    @PutMapping("/{money}/{id}")
+    public int updateAccountMoney(@PathVariable(value = "money") double money,
+                            @PathVariable(value = "id") int id) {
+        return accountService.updateAccountMoney(money,id);
+    }
+
 }

@@ -1,8 +1,6 @@
 package com.boot.service;
 
 import com.boot.models.Account;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
@@ -15,17 +13,26 @@ public interface AccountService {
 
     /**
      * add to table account
-     * @param name name
+     *
+     * @param name  name
      * @param money money
      * @return Integer
      */
-    int addAccount(String name ,double money);
+    int addAccount(String name, double money);
 
     /**
-     * 获取所有 Account
-     * @param name name
-     * @param money money
+     * get all Account
+     *
      * @return account list
      */
     List<Account> selectAccountList();
+
+    /**
+     * update money of Account
+     *
+     * @param id    id
+     * @param money money
+     * @return Integer
+     */
+    int updateAccountMoney(double money, int id);
 }

@@ -1,10 +1,7 @@
 package com.boot.dao.mybatis;
 
 import com.boot.models.Account;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -20,7 +17,8 @@ public interface AccountMapper {
 
     /**
      * add to table account
-     * @param name name
+     *
+     * @param name  name
      * @param money money
      * @return Integer
      */
@@ -28,12 +26,23 @@ public interface AccountMapper {
     int addAccount(@Param("name") String name, @Param("money") double money);
 
     /**
-     * 获取所有 Account
-     * @param name name
+     * get all Account
+     *
+     * @param name  name
      * @param money money
      * @return account list
      */
     @Select("select id,name,money from account")
     List<Account> selectAccountList();
+
+    /**
+     * update money of Account
+     *
+     * @param name name
+     * @param money money
+     * @return Integer
+     */
+    @Update("update account set money = #{money} where id = #{id}")
+    int updateAccountMoney(@Param("money")double money,@Param("id") int id);
 
 }
