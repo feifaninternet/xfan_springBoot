@@ -1,6 +1,5 @@
 package com.boot.web;
 
-import com.boot.web.service.impl.AccountServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -18,10 +17,10 @@ import java.util.Date;
 public class TestTimeTask {
 
     private static final Logger logger = LoggerFactory.getLogger(TestTimeTask.class.getName());
-    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 5000000)
     private void testTimeTask(){
-        logger.info("This time is {" + DATE_FORMAT.format(new Date()) + "}");
+        logger.info("This time is { " + dateFormat.format(new Date()) + " }");
     }
 }

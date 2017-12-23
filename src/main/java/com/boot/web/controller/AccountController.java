@@ -2,6 +2,7 @@ package com.boot.web.controller;
 
 import com.boot.web.dao.jpa.AccountDAO;
 import com.boot.web.models.Account;
+import com.boot.web.models.dto.AddAccountDTO;
 import com.boot.web.service.AccountService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -9,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -71,6 +73,11 @@ public class AccountController {
     public int updateAccountMoney(@PathVariable(value = "money") double money,
                             @PathVariable(value = "id") int id) {
         return accountService.updateAccountMoney(money,id);
+    }
+
+    @PostMapping(value = "/json/add")
+    public @ResponseBody int jsonAddAccounts(@Valid @RequestBody AddAccountDTO addAccountDTO) {
+        return accountService.jsonAddAccounts(addAccountDTO);
     }
 
 }

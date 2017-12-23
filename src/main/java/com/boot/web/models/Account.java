@@ -23,5 +23,5 @@ public class Account {
     private String name;
 
     @Getter @Setter
-    private double money;
+    private Double money;
 }

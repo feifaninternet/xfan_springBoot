@@ -1,6 +1,8 @@
 package com.boot.web.service;
 
 import com.boot.web.models.Account;
+import com.boot.web.models.dto.AddAccountDTO;
+
 import java.util.List;
 
 /**
@@ -13,7 +15,6 @@ public interface AccountService {
 
     /**
      * add to table account
-     *
      * @param name  name
      * @param money money
      * @return Integer
@@ -22,17 +23,23 @@ public interface AccountService {
 
     /**
      * get all Account
-     *
      * @return account list
      */
     List<Account> selectAccountList();
 
     /**
      * update money of Account
-     *
      * @param id    id
      * @param money money
      * @return Integer
      */
     int updateAccountMoney(double money, int id);
+
+    /**
+     * add account with json request
+     * @param addAccountDTO addAccountDTO
+     * @return Integer
+     */
+    int jsonAddAccounts(AddAccountDTO addAccountDTO);
+
 }
