@@ -38,7 +38,7 @@ public interface AccountMapper {
     /**
      * update money of Account
      *
-     * @param name name
+     * @param id id
      * @param money money
      * @return Integer
      */

@@ -3,7 +3,7 @@ spring:
 #    active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/xfan?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    url: jdbc:mysql://localhost:3306/xfan?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
     username: root
     password: xfan
 
@@ -23,6 +23,9 @@ spring:
       max-idle: 500
       min-idle: 0
     timeout: 0
+
+  thymeleaf:
+      prefix: classpath:/templates/
 
 my:
   name: xfan
