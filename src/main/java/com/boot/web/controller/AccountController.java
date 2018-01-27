@@ -1,7 +1,7 @@
 package com.boot.web.controller;
 
 import com.boot.web.dao.jpa.AccountDAO;
-import com.boot.web.models.Account;
+import com.boot.web.models.entity.Account;
 import com.boot.web.models.dto.AddAccountDTO;
 import com.boot.web.service.AccountService;
 import io.swagger.annotations.ApiImplicitParam;

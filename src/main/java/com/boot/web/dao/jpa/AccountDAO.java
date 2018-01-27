@@ -1,6 +1,6 @@
 package com.boot.web.dao.jpa;
 
-import com.boot.web.models.Account;
+import com.boot.web.models.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

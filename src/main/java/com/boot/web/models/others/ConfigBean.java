@@ -1,4 +1,4 @@
-package com.boot.web.models;
+package com.boot.web.models.others;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
 package com.boot.web.service.impl;
 
 import com.boot.web.dao.mybatis.AccountMapper;
-import com.boot.web.models.Account;
+import com.boot.web.models.entity.Account;
 import com.boot.web.models.dto.AddAccountDTO;
 import com.boot.web.service.AccountService;
 import org.slf4j.Logger;

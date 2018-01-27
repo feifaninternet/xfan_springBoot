@@ -1,6 +1,6 @@
 package com.boot.web.service;
 
-import com.boot.web.models.Account;
+import com.boot.web.models.entity.Account;
 import com.boot.web.models.dto.AddAccountDTO;
 
 import java.util.List;
