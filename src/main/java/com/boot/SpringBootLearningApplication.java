@@ -1,6 +1,7 @@
 package com.boot;
 
 import org.apache.catalina.Context;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
@@ -17,6 +18,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
+@MapperScan(basePackages = "com.boot.web.dao.mybatis")
 public class SpringBootLearningApplication {
 
     public static void main(String[] args) {

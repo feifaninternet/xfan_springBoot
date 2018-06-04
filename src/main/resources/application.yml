@@ -27,6 +27,11 @@ spring:
   thymeleaf:
       prefix: classpath:/templates/
 
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
 my:
   name: xfan
   age: 23

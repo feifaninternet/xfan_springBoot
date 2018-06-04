@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.1//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boot.web.dao.mybatis.UserMapper">
+
+    <resultMap id="userAndBookMap" type="com.boot.web.models.entity.UserAndBook">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <collection property="book" ofType="com.boot.web.models.entity.Book">
+            <id column="bid" property="bid"/>
+            <result column="userid" property="userid"/>
+            <result column="bookname" property="bookname"/>
+            <result column="bookprice" property="bookprice"/>
+        </collection>
+    </resultMap>
+
+    <select id="findAllUserAndBook" resultMap="userAndBookMap">
+        SELECT * FROM user u LEFT JOIN book b ON u.id = b.userid
+    </select>
+</mapper>
