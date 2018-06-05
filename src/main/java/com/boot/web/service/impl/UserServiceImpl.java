@@ -1,10 +1,13 @@
 package com.boot.web.service.impl;
 
+import com.boot.web.dao.els.ElsBeanRepository;
 import com.boot.web.dao.mybatis.UserMapper;
+import com.boot.web.models.entity.EsBean;
 import com.boot.web.models.entity.UserAndBook;
 import com.boot.web.service.UserService;
 import graphql.GraphQL;
 import graphql.schema.*;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,6 +24,7 @@ import static graphql.schema.GraphQLObjectType.newObject;
  * @desc UserServiceImpl
  */
 @Service
+@EnableElasticsearchRepositories
 public class UserServiceImpl implements UserService {
 
     @Resource

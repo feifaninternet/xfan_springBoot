@@ -7,6 +7,11 @@ spring:
     username: root
     password: xfan
 
+  data:
+       elasticsearch:
+         cluster-name: elasticsearch
+         cluster-nodes: 127.0.0.1:9300
+
   jpa:
       hibernate:
         ddl-auto: update  # 第一次简表create  后面用update
